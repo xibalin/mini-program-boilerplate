@@ -1,0 +1,28 @@
+<view 
+  id="xbSwiper"
+  class="xb-swiper"
+  bindtouchstart="touchstart"
+  bindtouchmove="touchmove"
+  bindtouchend="touchend"
+  bindtouchcancel="touchend"
+  style="height: {{height}}; width:{{width}}"
+>
+  <view
+    wx:if="{{direction == 'vertical'}}"
+    class="content {{transforming ? 'ease' : ''}}" 
+    style="height: calc(3 * {{height}}); transform: translateY({{move}}px)" 
+  >
+    <view wx:for="{{activeList}}" wx:key="{{index}}" class="swiper-item" style="height: {{height}}; width:{{width}}">
+      <slot name="{{item[slotTag]}}" />
+    </view>
+  </view>
+  <view
+    wx:if="{{direction == 'horizontal'}}"
+    class="content horizontal {{transforming ? 'ease' : ''}}" 
+    style="width: calc(3 * {{width}}); transform: translateX({{move}}px)" 
+  >
+    <view wx:for="{{activeList}}" wx:key="{{index}}" class="swiper-item" style="height: {{height}}; width:{{width}}">
+      <slot name="{{item[slotTag]}}" />
+    </view>
+  </view>
+</view>

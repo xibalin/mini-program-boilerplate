@@ -1,0 +1,7 @@
+<view class="ok-list-view">
+  <scroll-view scroll-y="{{scrollY}}" bindscrolltolower="scrollToLower">
+    <slot wx:if="{{!loading && total <= 0}}" name="empty"></slot>
+    <slot wx:if="{{total > 0}}" name="list-con"></slot>
+    <view wx:if="{{!firstLoading && total > 20}}" class="loading-section">{{loading ? "正在加载..." : noMore ? "没有更多了" : ""}}</view>
+  </scroll-view>
+</view>

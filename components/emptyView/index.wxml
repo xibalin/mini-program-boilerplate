@@ -1,0 +1,8 @@
+<view class="ok-empty-view">
+  <view class="main">
+    <image src="https://okkaozheng.oss-cn-shenzhen.aliyuncs.com/empty.png" mode="widthFix"/>
+    <view>{{noticeText}}</view>
+    <slot></slot>
+  </view>
+
+</view>

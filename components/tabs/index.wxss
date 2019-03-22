@@ -1,0 +1,39 @@
+.lr-tab{
+  width: 100%;
+}
+.lr-tab .tab-header{
+  width: 100%;
+  header: 82rpx;
+  display: flex;
+  background: #fff;
+  border-bottom: solid thin #e4e4e4;
+  position: relative;
+}
+.lr-tab .tab-header view{
+  flex: 1;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 33rpx;
+  font-weight: bolder;
+  color:#464646;
+}
+.lr-tab .tab-header view.active{
+  color: #fe7232;
+}
+.lr-tab .tab-header .tab-line{
+  position: absolute;
+  height: 6rpx;
+  background: #fe7232;
+  bottom:-1rpx;
+  transform: translateX(-50%);
+  transition: all .2s ease;
+}
+.lr-tab .tab-pane{
+  width: 100%;
+  overflow: hidden;
+}
+.lr-tab .tab-pane-main{
+  position: relative;
+  transition: all .2s ease;
+  -webkit-transition: all .2s ease;
+}

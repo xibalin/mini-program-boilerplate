@@ -1,0 +1,90 @@
+.ok-loading{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top:0;
+  left:0;
+  background: #fff;
+  transition: opacity .3s ease;
+  opacity: 1;
+}
+.ok-loading.disappear{
+  opacity: 0;
+}
+.loading-main{
+  width: 90rpx;
+  height: 90rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1
+}
+.ok-loading .loading-main .cover{
+  width: 90rpx;
+  height: 90rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 2;
+}
+.ok-loading .loading-main image{
+  width: 90rpx;
+  height: 90rpx;
+  display: block;
+  vertical-align: top;
+  animation: jump 1s;
+  -webkit-animation: jump 1s;
+  transform-origin: center;
+  position: absolute;
+  left:0;
+  bottom:0;
+  animation-iteration-count:infinite;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  z-index: 10;
+  will-change: auto;
+}
+.ok-loading .loading-main .shadow{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  transform:rotateX(45deg);
+  -webkit-transform:rotateX(45deg);
+  background: #464646;
+  position: absolute;
+  bottom: -20rpx;
+  margin: auto;
+  left:0;
+  right:0;
+  z-index: 1;
+  animation: scale 1s;
+  will-change: auto;
+  -webkit-animation: scale 1s;
+  animation-iteration-count:infinite;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+@keyframes scale{
+  0% {transform:rotateX(120deg) scale(1);-webkit-transform:rotateX(120deg) scale(1);}
+  50% {transform:rotateX(120deg) scale(0);-webkit-transform:rotateX(120deg) scale(0);}
+  100% {transform:rotateX(120deg) scale(1);-webkit-transform:rotateX(120deg) scale(1);}
+}
+@-webkit-keyframes scale{
+  0% {transform:rotateX(120deg) scale(1);-webkit-transform:rotateX(120deg) scale(1);}
+  50% {transform:rotateX(120deg) scale(0);-webkit-transform:rotateX(120deg) scale(0);}
+  100% {transform:rotateX(120deg) scale(1);-webkit-transform:rotateX(120deg) scale(1);}
+}
+@keyframes jump{
+  0% {bottom: 0}
+  50% {bottom: 40rpx}
+  100% {bottom: 0rpx}
+}
+@-webkit-keyframes jump{
+  0% {bottom: 0}
+  50% {bottom: 40rpx}
+  100% {bottom: 0rpx}
+}

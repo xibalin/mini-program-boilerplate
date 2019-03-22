@@ -1,0 +1,9 @@
+<view class="ok-loading {{loadingShow ? '' : 'disappear'}}" wx:if="{{domShow}}">
+  <view class="loading-main">
+    <image src="../../static/image/logo.png" />
+
+    <view class="shadow"></view>
+
+  </view>
+  
+</view>

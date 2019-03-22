@@ -1,0 +1,32 @@
+.xb-swiper{
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 10
+}
+.xb-swiper .content{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -ms-transition-property: -ms-transform;
+  transition-property: transform;
+}
+.xb-swiper .content.horizontal .swiper-item{
+  display: inline-block;
+}
+.xb-swiper .content.ease{
+  transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+  
+}
+.xb-swiper .content .swiper-item{
+  width: 100%;
+  vertical-align: top;
+  height: 100%;
+}

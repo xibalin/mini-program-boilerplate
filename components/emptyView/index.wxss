@@ -1,0 +1,26 @@
+.ok-empty-view{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #fff;
+}
+.main{
+  position: absolute;
+  width:80%;
+  margin: auto;
+  left:0;
+  right:0;
+  top:50%;
+  transform: translateY(-50%);
+}
+.main image{
+  width: 70%;
+  display: block;
+  margin:auto;
+}
+.main view{
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 33rpx;
+  color:#464646;
+}

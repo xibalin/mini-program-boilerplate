@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "xb-swiper": "../../components/xbSwiper/index",
+    "tabs": "../../components/tabs/index"
+  }
+}

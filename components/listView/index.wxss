@@ -1,0 +1,11 @@
+.loading-section{
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+scroll-view{
+  height: 100%;
+}
+.ok-list-view{
+  height: 100%;
+}

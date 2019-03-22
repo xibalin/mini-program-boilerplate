@@ -1,0 +1,22 @@
+<view class="lr-tab">
+  <view class="tab-header">
+    <view 
+      class="{{activeTab == index ? 'active' : ''}}" 
+      wx:for="{{tabs}}" 
+      wx:key="{{index}}"
+      catchtap="tabClick"
+      data-index="{{index}}"
+    >{{item}}</view>
+    <view class="tab-line" style="width: calc(100vw / {{tabs.length}} * 0.5);left: calc({{activeTab + 0.5}} * (100vw / {{tabs.length}}))"></view>
+  </view>
+  <view class="tab-pane">
+    <view 
+      class="tab-pane-main" 
+      style="width: calc(100vw * {{tabs.length}}); transform: translateX({{-activeTab * 100}}vw); -webkit-transform: translateX({{-activeTab * 100}}vw);"
+    >
+      <view class="tab-pane-inner">
+        <slot wx:for="{{tabs}}" wx:key="{{index}}" name="tab-{{index}}"></slot>
+      </view>
+    </view>
+  </view>
+</view>
